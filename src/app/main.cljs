@@ -7,13 +7,13 @@
 
 (defonce b 2)
 
-(defonce greeting "hello")
-(def who "world")
+(defonce greeting "Hello")
+(def who "WORld")
 
 (defn app []
   [:div greeting " " who])
 
-(defn main! []
+(defn ^:dev/after-load main! []
   (r/render [app]
             (.getElementById js/document "app"))
   (println "[main]: loading"))
